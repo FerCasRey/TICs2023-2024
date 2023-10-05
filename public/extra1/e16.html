@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lan="es">
     <head>
-        <title></title>
+        <title>Ejercicio 16</title>
         <meta charset="utf-8">
         <style>
             body {
@@ -17,9 +17,27 @@
             a:hover {
                 color: aliceblue;
             }
+            .div01 {
+                color: red;
+                background: grey;
+                border: 3px solid brown;
+                border-radius: 5%;
+                padding: 15%;
+                text-align: center;
+                font-family: monospace;
+                font-size: 40pt;
+            }
         </style>
     </head>
     <body>
+        <i>Enlaces internos</i><br>
+        <h1>Test de enlaces</h1>
+        Índice: <br>
+        <a href="#div01">X</a>__ <a href="#div02">Y</a>__<a href="#div03">Z</a>__<a href="#div04">A</a>
+        <div class="div01" id="div01">xxx</div>
+        <div class="div01" id="div02">yyy</div>
+        <div class="div01" id="div03">zzz</div>
+        <div class="div01" id="div04">aaa</div>
         <hr>
         <div onclick="{location='../extra1.html'}"> &larr; atrás </div>  
     </body>
