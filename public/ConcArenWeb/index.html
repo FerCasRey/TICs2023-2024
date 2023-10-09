@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>IES Concepcion Arenal</title>
+        <style>
+
+        </style>
+    </head>
+    <body onload="EndOfYearTimer()">
+        <p id="EndOfYearTimer">H</p>
+        
+    </body>
+    <script>
+        function EndOfYearTimer()  {
+            //Get time left  in seconds
+            var nextYear = new Date().getFullYear() + 1;
+            var stringNextYear = "Jun 21, " + nextYear;
+            var countDownDate = new Date(stringNextYear).getTime();
+            var today = new Date().getTime();
+            var distance = countDownDate - today;
+            //Calculations to show in days
+            var days = Math.floor(distance/ (1000* 3600 * 24))
+            
+
+            document.getElementById("EndOfYearTimer").innerHTML = days + "d";       
+        }
+    </script>
+</html>
