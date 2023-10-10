@@ -4,11 +4,48 @@
         <meta charset="utf-8">
         <title>IES Concepcion Arenal</title>
         <style>
+            body {
+                background-color: antiquewhite;
+                color: #000000;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1,125rem;
 
+            }
+            /*Following EU standards*/
+            h1, h2 {
+                font-weight: 600;
+                text-decoration: underline;
+            }
+            .EndOfSchool {
+                border-radius: 5px;
+                border: dashed lightblue 2px;
+                text-align: center;
+                vertical-align: top;                
+            }
+            .moto {
+                font-style: italic;
+            }
         </style>
     </head>
     <body onload="EndOfYearTimer()">
-        <p id="EndOfYearTimer">H</p>
+        <table style="border: 1px tomato;">
+            <tr>
+                <td rowspan="2"><img style="width: 144px; height: 63px;" src="http://www.edu.xunta.gal/centros/iesconcepcionarenal/system/files/logoCA2.png"></td>
+                <td>
+                    <div>
+                        <h1 style="text-align: center; vertical-align: bottom;">IES Concepcion Arenal</h1>
+                    </div>
+                    <div>
+                        <h5 class="moto" style="vertical-align: top; position: relative; top: -10px;">"Abride escolas e se pecharán cárceres"</h5>
+                    </div>
+                </td>
+                <td><div></div></td>
+            </tr>            
+        </table> 
+        
+        <p class="EndOfSchool" id="EndOfYearTimer"></p>
+        <h1
+        
         
     </body>
     <script>
@@ -23,7 +60,7 @@
             var days = Math.floor(distance/ (1000* 3600 * 24))
             
 
-            document.getElementById("EndOfYearTimer").innerHTML = days + "d";       
+            document.getElementById("EndOfYearTimer").innerHTML = days + " días";       
         }
     </script>
 </html>
