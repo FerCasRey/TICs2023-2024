@@ -1,1 +1,1 @@
-hey
+Content used in CSS assignments
