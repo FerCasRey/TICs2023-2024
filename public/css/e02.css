@@ -1,0 +1,42 @@
+.poesia {
+    font-family: sans-serif;
+    float: left;
+    width: auto;
+
+}
+.poesia div {
+    width: 80%;
+    border-top: solid 1px #FF000088;
+    margin: auto;
+}
+
+h1 {
+    color: blue;
+    font-size: 18px;
+    text-align: center;
+}
+p {
+    color: black;
+    font-size: 12px;
+    text-align: left;
+    background-color: lightgreen;
+    border: 2px solid green;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 15px;
+
+}
+p::first-line {
+    font-weight: bold;
+
+}
+p::first-letter {
+    text-transform: uppercase;
+
+}
+body {
+    background-image: url("https://github.com/FerCasRey/TICs2023-2024/blob/main/public/css/content/White-parchment-paper.jpg?raw=true") ;
+    background-size:cover;
+    background-attachment: fixed;
+    
+}
