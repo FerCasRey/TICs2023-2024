@@ -1,3 +1,30 @@
+.cabecera {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 35px;
+    width: 100%;
+    background-color: #90EE9055;
+    z-index: 1;
+}
+.cuerpo {
+    position: fixed;
+    padding-left: 0px;
+    padding-top: 35px;
+    background-color: #90EE9022;
+    width: 100%;
+    height: calc(100% - 35px);
+    overflow: auto;
+}
+.cuerpo div {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #444444FF;
+    border-radius: 8px;
+    background-color: #FFD70033;
+
+}
+
 .poesia {
     font-family: sans-serif;
     float: left;
