@@ -1,0 +1,131 @@
+.cabecera {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 35px;
+    width: 100%;
+    background-color: #90EE9055;
+    z-index: 1;
+}
+.cuerpo {
+    position: fixed;
+    padding-left: 0px;
+    padding-top: 35px;
+    background-color: #90EE9022;
+    width: 100%;
+    height: calc(100% - 35px);
+    overflow: auto;
+}
+.cuerpo div {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #444444FF;
+    border-radius: 8px;
+    background-color: #FFD70033;
+
+}
+
+.poesia {
+    font-family: sans-serif;
+    float: left;
+    width: auto;
+
+}
+.poesia div {
+    width: 80%;
+    border-top: solid 1px #FF000088;
+    margin: auto;
+}
+
+h1 {
+    color: blue;
+    font-size: 18px;
+    text-align: center;
+}
+p {
+    color: black;
+    font-size: 12px;
+    text-align: left;
+    background-color: lightgreen;
+    border: 2px solid green;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 15px;
+
+}
+p::first-line {
+    font-weight: bold;
+
+}
+p::first-letter {
+    text-transform: uppercase;
+
+}
+body {
+    background-image: url("https://github.com/FerCasRey/TICs2023-2024/blob/main/public/css/content/White-parchment-paper.jpg?raw=true") ;
+    background-size:cover;
+    background-attachment: fixed;
+    
+}
+.foto {
+    width: 400px;
+    /*height: 300px;*/
+    float: left;
+}
+
+/*ALL THE NEW STUFF */
+
+.horizontal {
+    display: inline;
+}
+.elemento_pricipal {
+    list-style: none; 
+    color:var(--gris);
+    border-radius:4px;
+    margin: 5px;
+    padding: 3px;
+    float: left;
+    height: 30px;
+    width: auto;
+    background-color: var(--fondo-claro);
+    border: 1px solid var(--gris);
+    
+
+}
+:root {
+    --gris:#444444FF;
+    --fondo-claro: #90EE9088;
+    --fondo-oscuro: #90EE90DD;
+    --dorado: #FFD70033;
+    --altura_cabecera: 35px;
+}
+.elemento_principal:hover {
+    border-color: #000000FF;
+    color: #000000FF;
+    font-size: 130%;
+}
+.elemento_principal ul {
+    display: none;
+    padding: inherit;
+    border-radius: inherit;
+}
+.elemento_principal:hover ul {
+    display: block;
+}
+.elemento_principal li {
+    border: 1px solid var(--gris);
+    padding: inherit;
+    border-radius: inherit;
+    color: var(--gris);
+    margin-top: 3px;
+    background-color: var(--dorado);
+}
+.elemento_principal li:hover {
+    background-color: var(--fondo-oscuro);
+    border-color: #000000FF;
+    color: #000000FF;
+}
+li {
+    display: inline-block;
+    padding-right: 5px;
+}
