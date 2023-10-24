@@ -76,15 +76,18 @@ body {
 /*ALL THE NEW STUFF */
 
 .horizontal {
-    display: inline;
+    display:inline-flex;
+    
 }
 .elemento_pricipal {
     list-style: none; 
     color:var(--gris);
     border-radius:4px;
     margin: 5px;
+    
     padding: 3px;
     float: left;
+    
     height: 30px;
     width: auto;
     background-color: var(--fondo-claro);
@@ -126,6 +129,8 @@ body {
     color: #000000FF;
 }
 li {
+    margin-top: -20px;
+    
     display: inline-block;
     padding-right: 5px;
 }
