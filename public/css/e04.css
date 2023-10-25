@@ -32,8 +32,12 @@
 
 }
 .poesia div {
+    border-radius: 0px;
+    
+    padding: 0px;
     width: 80%;
-    border-top: solid 1px #FF000088;
+    border-top: solid  #FF000088;
+    background-color: white;
     margin: auto;
 }
 
@@ -69,7 +73,7 @@ body {
 }
 .foto {
     width: 400px;
-    /*height: 300px;*/
+    height: auto;
     float: left;
 }
 
@@ -79,7 +83,7 @@ body {
     display:inline-flex;
     
 }
-.elemento_pricipal {
+.elemento_principal {
     list-style: none; 
     color:var(--gris);
     border-radius:4px;
@@ -99,7 +103,7 @@ body {
     --gris:#444444FF;
     --fondo-claro: #90EE9088;
     --fondo-oscuro: #90EE90DD;
-    --dorado: #FFD70033;
+    --dorado: #ffd90066;
     --altura_cabecera: 35px;
 }
 .elemento_principal:hover {
@@ -129,8 +133,5 @@ body {
     color: #000000FF;
 }
 li {
-    margin-top: -20px;
-    
     display: inline-block;
-    padding-right: 5px;
 }
