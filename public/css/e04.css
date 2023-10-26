@@ -88,7 +88,7 @@ body {
     color:var(--gris);
     border-radius:4px;
     margin: 5px;
-    
+    margin-top: -15px;
     padding: 3px;
     float: left;
     
@@ -109,7 +109,8 @@ body {
 .elemento_principal:hover {
     border-color: #000000FF;
     color: #000000FF;
-    font-size: 130%;
+    font-size: 120%;
+    background-color: var(--fondo-oscuro);
 }
 .elemento_principal ul {
     display: none;
