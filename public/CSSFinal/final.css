@@ -1,0 +1,21 @@
+body {
+    background: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+}
+h1 {
+    letter-spacing: 2px;
+    font-size: 45px;
+}
+h5 {
+    text-align: left;
+    letter-spacing: -2px;
+}
+.head {
+    margin-top: -15px;
+    
+}
+.menu {
+    display: inline-block;
+}
