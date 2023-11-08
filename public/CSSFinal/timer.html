@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styleSheets/final.css">
+    <title>Timer</title>
+    <style>
+        #timer {
+            display: flex;
+            vertical-align: middle;
+            justify-content: center;
+            font-size: 100px;
+            height: 100px;
+        }
+
+        .quickSets,
+        .userSelect {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            height: 40px;
+            word-spacing: 10px;
+            font-size: 35px;
+            vertical-align: bottom;
+            margin-top: 10px;
+        }
+
+        .quickSet {
+            width: 50px;
+            background-color: black;
+            color: white;
+        }
+
+        input {
+            background-color: black;
+            color: white;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        button:active {
+            transform: translateY(1px);
+            transition-duration: 0.2s;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+            border-style: none;
+            font-size: 25px;
+
+        }
+        button:hover, input:hover {
+            color: #999;
+            transition-duration: 0.2s;
+        }
+
+        body {
+            margin-top: 300px;
+
+        }
+        .message {
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            text-decoration: underline;
+            text-decoration-thickness: 1px ;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="timer"></div>
+    <div class="quickSets">
+        <button class="quickSet" onclick="add10()">+10</button>
+        <span style="width: 30px;"></span>
+        <button class="quickSet" onclick="add20()">+20</button>
+        <span style="width: 30px;"></span>
+        <button class="quickSet" onclick="add30()">+30</button>
+    </div>
+    <div class="userSelect">
+        <input type="number" id="userHours" max="23" min="0" value="0">h
+        <span style="width: 30px;"></span>
+        <input type="number" id="userMinutes" max="59" min="0" value="25">m
+        <span style="width: 30px;"></span>
+        <button class="quickSet" onclick="addTime()">Go</button>
+
+    </div>
+    <div class="message" id="message">
+
+    </div>
+
+
+
+</body>
+<script>
+    // Add a fix amount of time
+    function add10() {
+        targetDate = targetDate + 10 * 60 * 1000
+    }
+    function add20() {
+        targetDate = targetDate + 20 * 60 * 1000
+    }
+    function add30() {
+        targetDate = targetDate + 30 * 60 * 1000
+    }
+
+    // Adds the time selected by the user
+    function addTime() {
+        var myHours = document.getElementById("userHours").value * 60 * 60 * 1000;
+        var myMinutes = document.getElementById("userMinutes").value * 60 * 1000;
+        if (myHours + myMinutes >= 24 * 60 * 60 * 1000) {
+            document.getElementById('message').innerHTML = "Please, select a time under 24h";
+        } else {
+            document.getElementById('message').innerHTML = ""
+            targetDate = new Date().getTime() + myHours + myMinutes;
+        }
+    }
+    // Set the target date and time for the countdown
+    var targetDate = new Date().getTime() + 25 * 60 * 1000 + 2 * 1000;
+
+    // Update the countdown every second
+    var timer = setInterval(function () {
+        // Get the current date and time
+        var currentDate = new Date().getTime();
+
+        // Calculate the time remaining
+        var timeRemaining = targetDate - currentDate;
+
+        // Calculate hours, minutes, and seconds
+        var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        // Display the countdown timer
+        var timerElement = document.getElementById("timer");
+        timerElement.innerHTML = hours + "h " + minutes + "m " + seconds + "s";
+
+        // When the countdown reaches zero
+        if (timeRemaining <= 0) {
+
+            timerElement.innerHTML = "Countdown expired!";
+            var audio = getElementById('myAudio');
+            audio.play()
+        }
+    }, 1000); // Update the timer every second
+</script>
+
+</html>

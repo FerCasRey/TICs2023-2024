@@ -3,18 +3,20 @@ body {
     font-family: 'Courier New', Courier, monospace;
     color: white;
     text-align: center;
+    
 }
 h1 {
     letter-spacing: 2px;
     font-size: 45px;
     color: white;
 }
-a {
+h1 a {
     letter-spacing: 2px;
     font-size: 45px;
     color: white;
     text-decoration: none;
 }
+
 h5 {
     text-align: left;
     letter-spacing: -2px;
@@ -29,27 +31,32 @@ h5 {
     word-spacing: 50px;
     font-size: 20px;
     margin-top: -20px;
-    transition-duration: 0.3s;
     
     
 }
 .subMenu {
     word-spacing: 50px;
     font-size: 20px;
-    transition-duration: 0.3s;
     cursor: default;
-
+    position: relative;
+    user-select: none;
+    transition-duration: 0.2s;
 }
+
 .subMenu:hover {
     font-size: 25px;
     transition-duration: 0.3s;
+    
 }
-.subMenu li:hover {
-    scale: X(2x);
+.subMenu li:hover a {
+    transform: translateY(1px);
+    transition-duration: 0.1s;
+    color: #999;
 }
 .subMenu li:active {
     transform: translateY(2px);
     transition-duration: 0.1s;
+    
 }
 
 
@@ -58,14 +65,20 @@ li {
     text-align: left;
 }
 
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+
 .subMenu ul {
     display: none;
-    transition-duration: 0.3s;
+    position: absolute;
+    top: 10px;
+    left: -40px;
 }
 .subMenu:hover ul {
-    transition: display 0.3s ease-in-out;
-    display: inline;
+    display: block;
     font-size: 17px;
     
 }
-.
