@@ -29,14 +29,43 @@ h5 {
     word-spacing: 50px;
     font-size: 20px;
     margin-top: -20px;
-    transition-duration: 0.3s
+    transition-duration: 0.3s;
     
+    
+}
+.subMenu {
+    word-spacing: 50px;
+    font-size: 20px;
+    transition-duration: 0.3s;
+    cursor: default;
+
 }
 .subMenu:hover {
     font-size: 25px;
     transition-duration: 0.3s;
 }
-.subMenu:active {
+.subMenu li:hover {
+    scale: X(2x);
+}
+.subMenu li:active {
     transform: translateY(2px);
     transition-duration: 0.1s;
 }
+
+
+li {
+    list-style-type: none;
+    text-align: left;
+}
+
+.subMenu ul {
+    display: none;
+    transition-duration: 0.3s;
+}
+.subMenu:hover ul {
+    transition: display 0.3s ease-in-out;
+    display: inline;
+    font-size: 17px;
+    
+}
+.
