@@ -16,6 +16,12 @@ h1 a {
     color: white;
     text-decoration: none;
 }
+h2 a {
+    letter-spacing: 1px;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
 
 h5 {
     text-align: left;
@@ -41,6 +47,11 @@ h5 {
     position: relative;
     user-select: none;
     transition-duration: 0.2s;
+    
+}
+.subMenu a {
+    color: white;
+    text-decoration: none;
 }
 
 .subMenu:hover {
@@ -80,5 +91,11 @@ li a {
 .subMenu:hover ul {
     display: block;
     font-size: 17px;
+    
+}
+
+.text {
+    display: flex;
+    width: 50%;
     
 }
